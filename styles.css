@@ -109,27 +109,13 @@ address {
   column-gap: 48px;
 }
 
-.nav_item--relative {
+.nav_item--relative,
+.locale {
   position: relative;
 }
 
-.courses_list,
-.locale_list {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 0;
-  width: 100%;
-  overflow: hidden;
-}
-
-.header-right_side {
-  display: inherit;
-  align-items: center;
-  column-gap: 48px;
-}
-
 .arrow {
+  cursor: pointer;
   display: flex;
   align-items: center;
   column-gap: 6px;
@@ -143,6 +129,27 @@ address {
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  max-height: 0;
+  background-color: #fff;
+  overflow: hidden;
+  transition: max-height 300ms linear;
+}
+
+.arrow:hover + .dropdown,
+.dropdown:hover {
+  max-height: 100vh;
+}
+
+.header-right_side {
+  display: inherit;
+  align-items: center;
+  column-gap: 48px;
 }
 
 .black_btn {
